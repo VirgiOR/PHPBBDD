@@ -1,19 +1,14 @@
 <?php
-//incluimos la coexión a la base d datos
-require_once("config.php");
+require_once("database/plantillas/cabecera.php");
 ?>
+<article>
+    <h2>Bienvenido al sistema de Gestión Séneca</h2>
+    <p>Loren ipsum</p>
+
+    <p>Lorem ipsum</p>
 
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>Holi</h1>
-    
-    
-</body>
-</html>
+<?php
+
+require_once("database/plantillas/pie.php");
+?>
