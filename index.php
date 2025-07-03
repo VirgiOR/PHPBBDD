@@ -1,3 +1,9 @@
+<?php
+//incluimos la coexión a la base d datos
+require_once("config.php");
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,6 +13,7 @@
 </head>
 <body>
     <h1>Holi</h1>
+    
     
 </body>
 </html>
