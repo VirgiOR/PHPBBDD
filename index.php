@@ -1,5 +1,5 @@
 <?php
-require_once("database/plantillas/cabecera.php");
+require_once("plantillas/cabecera.php");
 ?>
 <article>
     <h2>Bienvenido al sistema de Gestión Séneca</h2>
@@ -10,5 +10,5 @@ require_once("database/plantillas/cabecera.php");
 
 <?php
 
-require_once("database/plantillas/pie.php");
+require_once("plantillas/pie.php");
 ?>
