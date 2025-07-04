@@ -13,6 +13,7 @@ require_once( 'plantillas/cabecera.php' );
 <th>Apellido2</th>
 <th>Fecha de nacimiento</th>
 <th>Correo electrónico</th>
+<th>Eliminar</th>
 </tr>
 </thead>
 <tbody>
@@ -30,12 +31,24 @@ while ( $fila =  mysqli_fetch_array( $filas ) ) {
     echo '<td>'. $fila[ 'apellido2' ].' </td>';
     echo '<td>'. $fila[ 'fecha_nac' ].' </td>';
     echo '<td>'. $fila[ 'email' ].' </td>';
+    echo "<td><a href='borrado.php?id=".$fila['id']."'>Eliminar</a></td>";
+
+    echo "</tr>";
 }
 
 ?>
 </tbody>
 
 </table>
+<div class="mensaje">
+    <?php
+    if (isset($_SESSION['mensaje'])){
+        echo $_SESSION['mensaje'];
+        unset($_SESSION['mensaje']);
+        
+    }
+    ?>
+
 </article>
 
 <?php require_once( 'plantillas/pie.php' );
