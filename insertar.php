@@ -1,7 +1,7 @@
 <?php
 
 if(!isset($POST ["nombre"])) {
-    header("registro.php");
+    header("Location:registro.php");
 
 }
 require_once("plantillas/cabecera.php");
