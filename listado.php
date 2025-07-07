@@ -13,6 +13,7 @@ require_once( 'plantillas/cabecera.php' );
 <th>Apellido2</th>
 <th>Fecha de nacimiento</th>
 <th>Correo electrónico</th>
+<th>Editar</th>
 <th>Eliminar</th>
 </tr>
 </thead>
@@ -31,6 +32,7 @@ while ( $fila =  mysqli_fetch_array( $filas ) ) {
     echo '<td>'. $fila[ 'apellido2' ].' </td>';
     echo '<td>'. $fila[ 'fecha_nac' ].' </td>';
     echo '<td>'. $fila[ 'email' ].' </td>';
+    echo "<td><a href='editar.php?id=".$fila['id']."'>Editar</a></td>";
     echo "<td><a href='borrado.php?id=".$fila['id']."'>Eliminar</a></td>";
 
     echo "</tr>";
