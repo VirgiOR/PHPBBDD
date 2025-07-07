@@ -20,3 +20,11 @@ create table alumnos (
     fecha_nac DATE,
     email VARCHAR(100)
 );
+
+CREATE TABLE asignaturas (
+    id int unsigned AUTO_INCREMENT primary key,
+    nombre varchar(50) not null,
+    tipo enum( 'TRONCAL', 'OPBLIGATORIA', 'OPTATIVA'),
+    CREDITOS FLOAT DEFAULT 6 check(creditos>0),
+    curso TINYINT UNSIGNED
+);
