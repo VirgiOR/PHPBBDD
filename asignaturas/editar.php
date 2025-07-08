@@ -7,14 +7,14 @@ if (!isset($_GET['id'])) {
 $consulta="SELECT * FROM asignaturas WHERE id=".$_GET['id'];
 $resultado= mysqli_query($conexion, $consulta);
 if (mysqli_num_rows($resultado)==0) {
-    $_SESSION['mensaje']= 'No se puede editar.  No existe nungún alumno con id '.$_GET['id'];
+    $_SESSION['mensaje']= 'No se puede editar.  No existe nungúna asignatura con id '.$_GET['id'];
     header('Location:listado.php');
 }
 $fila= mysqli_fetch_array($resultado);
 $id= $fila['id'];
 $nombre= $fila['nombre'];
 $tipo= $fila['tipo'];
-$creditos= $fila['creditos'];
+$creditos= $fila['CREDITOS'];
 $curso= $fila['curso'];
 
 
@@ -28,10 +28,7 @@ $curso= $fila['curso'];
 <input type = 'text' name="nombre" id = 'nombre' required value= '<?=$nombre?>'>
 </div>
 
-<div class = 'control'>
-<label for = 'tipo'>Tipo: </label>
-<input type = 'text' name="tipo" id = "tipo" required value='<?=$tipo?>'>
-</div>
+
 
 <div class = 'control'>
 <label for = 'tipo'>Tipo: </label>
@@ -46,8 +43,14 @@ $curso= $fila['curso'];
 
 
 <div class = 'control'>
-<label for = "fechanac">Fecha Nacimiento: </label>
-<input type = "num" name="curso" id = "curso" id="fecha_nac" value='<?= $curso?>'>
+<label for = "creditos">Curso: </label>
+<input type = "number" name="creditos" id="creditos" value='<?= $creditos?>'>
+</div>
+
+
+<div class = 'control'>
+<label for = "curso">Curso: </label>
+<input type = "number" name="curso" id = "curso" id="curso" value='<?= $curso?>'>
 </div>
 
 

@@ -26,9 +26,11 @@ require_once( '../plantillas/cabecera.php' );
 
 
 <div class = 'control'>
-<label for = "creditos">Créditos: </label>
+<label for = "creditos">Creditos: </label>
 <input type = "number" name="creditos" id = "creditos" value='6' min='0.5' max='15'>
 </div>
+
+
 
 <div class = 'control'>
 <label for = 'curso'>Curso: </label>

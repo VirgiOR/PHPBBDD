@@ -9,13 +9,13 @@ if(!isset($_POST['id']) || !isset($_POST['nombre'])) {
 $id = $_POST['id'];
 $nombre = $_POST['nombre'];
 $tipo = $_POST['tipo'];
-$creditos = $_POST['creditos'];
+$creditos = $_POST['CREDITOS'];
 $curso = $_POST['curso'];
 
 
 $consulta = "UPDATE  asignaturas SET nombre=?, tipo=?,CREDITOS=?, curso=? WHERE id=?";
 $preparada = mysqli_prepare($conexion,$consulta);
-mysqli_stmt_bind_param($preparada, 'ssddi', $nombre,$tipo,$creditos,$curso,$id);
+mysqli_stmt_bind_param($preparada, 'ssdii', $nombre,$tipo,$creditos,$curso,$id);
 mysqli_stmt_execute($preparada);
 if (mysqli_affected_rows($conexion)==1){
     header('Location: listado.php');
